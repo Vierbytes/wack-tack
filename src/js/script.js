@@ -4,7 +4,7 @@
 const hamburger = document.getElementById('hamburger')
 const navMenu = document.getElementById('navMenu')
 const navLinks = document.querySelectorAll('.nav-link')
-const heroCTA = document.getElementById('heroCTA')
+const heroCTA = document.getElementById('heroButton')
 const modal = document.getElementById('signupModal')
 const closeModal = document.getElementById('closeModal')
 const signupForm = document.getElementById('signupForm')
@@ -47,18 +47,17 @@ navLinks.forEach(link => {
 // Modal Functionality
 // ========================================
 function openModal() {
-    modal.classList.add('show')
+    modal.classList.remove('hidden')
     document.body.style.overflow = 'hidden' // Prevent background scrolling
 }
 
 function closeModalHandler() {
-    modal.classList.remove('show')
+    modal.classList.add('hidden')
     document.body.style.overflow = 'auto' // Restore scrolling
 
     // Reset form
     signupForm.reset()
 }
-
 // Open modal when CTA button is clicked
 heroCTA.addEventListener('click', openModal)
 
@@ -74,11 +73,10 @@ modal.addEventListener('click', (e) => {
 
 // Close modal with Escape key
 document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.classList.contains('show')) {
+    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
         closeModalHandler()
     }
 })
-
 
 signupForm.addEventListener('submit', (e) => {
     e.preventDefault()
@@ -92,5 +90,7 @@ signupForm.addEventListener('submit', (e) => {
 
     alert("Thank you! Your 30% off code is on the way!");
 
-    closeModalHandler()  
+    closeModalHandler()
 })
+
+
