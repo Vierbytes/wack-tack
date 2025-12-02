@@ -78,19 +78,66 @@ document.addEventListener('keydown', (e) => {
     }
 })
 
+// signupForm.addEventListener('submit', (e) => {
+//     e.preventDefault()
+
+//     const email = document.getElementById('emailInput').value.trim()
+
+//     if (!email) {
+//         alert("Please enter a valid email address.")
+//         return
+//     }
+
+//     alert("Thank you! Your 30% off code is on the way!");
+
+//     closeModalHandler()
+// })
+
+
 signupForm.addEventListener('submit', (e) => {
     e.preventDefault()
 
-    const email = document.getElementById('emailInput').value.trim()
+    const email = emailInput.value.trim()
 
-    if (!email) {
-        alert("Please enter a valid email address.")
-        return
+    if (email) {
+        // Simulate form submission
+        showSuccessMessage(email)
+
+        // Close modal after a short delay
+        setTimeout(() => {
+            closeModalHandler()
+        }, 2500)
     }
-
-    alert("Thank you! Your 30% off code is on the way!");
-
-    closeModalHandler()
 })
 
+function showSuccessMessage(email) {
+    // Create success message element
+    const successDiv = document.createElement('div')
+    successDiv.className = 'success-message'
+    successDiv.innerHTML = `
+        <p style="font-size: 1.5rem margin-bottom: 0.5rem"><img src="./images/dance.gif" alt="celey"> Thanks for signing up!</p>
+        <p>Your 30% discount code has been sent to:</p>
+        <p><strong>${email}</strong></p>
+        <p style="margin-top: 1rem font-size: 0.875rem color: #718096">Check your inbox for your exclusive Tacky Town discount!</p>
+    `
 
+    // Style the success message
+    successDiv.style.cssText = `
+        background: linear-gradient(135deg, #7ED957, #6EC845)
+        color: #2d3748
+        padding: 2rem
+        border-radius: 8px
+        margin-top: 1rem
+        text-align: center
+        animation: slideUp 0.3s ease
+    `
+
+    // Replace form with success message
+    const form = document.querySelector('#signupForm')
+    form.replaceWith(successDiv)
+
+    // Restore form after modal closes
+    setTimeout(() => {
+        successDiv.replaceWith(form)
+    }, 3000)
+}
