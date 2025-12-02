@@ -20,9 +20,9 @@
         <nav role="navigation" id="navBar" class="flex flex-col md:flex-row justify-center items-center py-10 gap-20 h-[10vh] shadow-lg bg-white">
             <a class="navTitle" href="#">TACKY TOWN</a>
             <div class="navLinks flex flex-col md:flex-row gap-9">
-                <a href="#" class="hover:text-dusk">Featured</a>
-                <a href="#" class="hover:text-bloom">Categories</a>
-                <a href="#" class="hover:text-seaweed">About</a>
+                <a href="#featured" class="nav-link hover:text-dusk">Featured</a>
+                <a href="#categories" class="nav-link hover:text-bloom">Categories</a>
+                <a href="#about" class="nav-link hover:text-seaweed">About</a>
             </div>
         </nav>
 
@@ -36,105 +36,122 @@
             <img src="./src/assets/XMAS100.png" class="deco absolute top-48 left-0">
         </section>
 	</header>
-    <main>
+    <main class="my-8 px-15">
         <!-- featured post section -->
-        <section aria-label="featured products section">
+        <section id="featured" aria-label="featured products section" class="flex flex-col gap-9">
+            <h2 class="font-bagel text-4xl">Featured: Merry & Messy</h2>
             <!-- featured posts carousel -->
-            <section class="featured" id="featured">
-                <div class="container">
-                    <h2 class="section-title">Featured: Merry & Messy</h2>
-
-                    <div class="carousel-wrapper">
-                        <div class="carousel-container" id="carousel">
-                            <!-- Product Card 1 -->
-                            <div class="product-card">
-                                <div class="product-image">
-                                    <div class="image-placeholder"></div>
-                                </div>
-                                <div class="product-info">
-                                    <div class="product-header">
-                                        <h3>Product Name</h3>
-                                        <span class="price">$100</span>
-                                    </div>
-                                    <p class="product-description">Quick Description</p>
-                                    <button class="view-button">View</button>
-                                </div>
-                            </div>
-
-                            <!-- Product Card 2 -->
-                            <div class="product-card">
-                                <div class="product-image">
-                                    <div class="image-placeholder"></div>
-                                </div>
-                                <div class="product-info">
-                                    <div class="product-header">
-                                        <h3>Product Name</h3>
-                                        <span class="price">$100</span>
-                                    </div>
-                                    <p class="product-description">Quick Description</p>
-                                    <button class="view-button">View</button>
-                                </div>
-                            </div>
-
-                            <!-- Product Card 3 -->
-                            <div class="product-card">
-                                <div class="product-image">
-                                    <div class="image-placeholder"></div>
-                                </div>
-                                <div class="product-info">
-                                    <div class="product-header">
-                                        <h3>Product Name</h3>
-                                        <span class="price">$100</span>
-                                    </div>
-                                    <p class="product-description">Quick Description</p>
-                                    <button class="view-button">View</button>
-                                </div>
-                            </div>
-
-                            <!-- Product Card 4 -->
-                            <div class="product-card">
-                                <div class="product-image">
-                                    <div class="image-placeholder"></div>
-                                </div>
-                                <div class="product-info">
-                                    <div class="product-header">
-                                        <h3>Product Name</h3>
-                                        <span class="price">$100</span>
-                                    </div>
-                                    <p class="product-description">Quick Description</p>
-                                    <button class="view-button">View</button>
-                                </div>
-                            </div>
-
-                            <!-- Product Card 5 -->
-                            <div class="product-card">
-                                <div class="product-image">
-                                    <div class="image-placeholder"></div>
-                                </div>
-                                <div class="product-info">
-                                    <div class="product-header">
-                                        <h3>Product Name</h3>
-                                        <span class="price">$100</span>
-                                    </div>
-                                    <p class="product-description">Quick Description</p>
-                                    <button class="view-button">View</button>
-                                </div>
-                            </div>
+            <div class="carousel-container flex flex-row gap-6" id="carousel">
+                <!-- Product Card 1 -->
+                <div class="product-card bg-mustard flex flex-col gap-6 w-[500px] py-6">
+                    <div class="product-image flex flex-row justify-center">
+                        <img src="https://cdn.media.amplience.net/s/hobbylobby/405655055-81222590-08252025-IMGSET?fmt=webp&w=544&h=544&sm=mc" alt="small rudoplh ornament" class="object-cover w-75">
+                    </div>
+                    <div class="product-info flex flex-col gap-4">
+                        <div class="product-header flex flex-col lg:flex-row justify-between">
+                            <h3 class="font-bagel text-2xl">Rudolph Ornament</h3>
+                            <span class="price">$50</span>
+                        </div>
+                        <p class="product-description">A little ugly, a lot adorable. Rudolph’s glowing red nose gives this sweater ornament the perfect holiday sparkle!</p>
+                        <div class="flex justify-end">
+                            <button class="view-button text-lg bg-seaweed px-4 py-1 rounded-lg">View</button>
                         </div>
                     </div>
                 </div>
-            </section>
+                <!-- Product Card 2 -->
+                <div class="product-card bg-mustard flex flex-col gap-6 w-[500px] py-6">
+                    <div class="product-image flex flex-row justify-center">
+                        <img src="https://i.ebayimg.com/images/g/I-8AAOSwpa5m6ciC/s-l400.jpg" alt="snoop sweater that says merry chrizzmizzle" class="object-cover w-75">
+                    </div>
+                    <div class="product-info flex flex-col gap-4">
+                        <div class="product-header flex flex-col lg:flex-row justify-between">
+                            <h3 class="font-bagel text-2xl">Snoop Sweater</h3>
+                            <span class="price">$50</span>
+                        </div>
+                        <p class="product-description">Festive, fabulous, and fully fo’ shizzle. This Snoop sweater brings instant holiday street cred (and maybe judgment from your aunt)</p>
+                        <div class="flex justify-end">
+                            <button class="view-button text-lg bg-seaweed px-4 py-1 rounded-lg">View</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 3 -->
+                <div class="product-card bg-mustard flex flex-col gap-6 w-[500px] py-6">
+                    <div class="product-image flex flex-row justify-center">
+                        <img src="https://target.scene7.com/is/image/Target/GUEST_5db8001d-40ce-4868-8894-4fd021236566" alt="gingerbread mug" class="object-cover w-75">
+                    </div>
+                    <div class="product-info flex flex-col gap-4">
+                        <div class="product-header flex flex-col lg:flex-row justify-between">
+                            <h3 class="font-bagel text-2xl">Gingerbrain Mug</h3>
+                            <span class="price">$50</span>
+                        </div>
+                        <p class="product-description">One sip and you’re 80% sugar cookie, 20% chaos. The perfect mug for festive caffeine emergencies!</p>
+                        <div class="flex justify-end self-end">
+                            <button class="view-button text-lg bg-seaweed px-4 py-1 rounded-lg">View</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 4 -->
+                <div class="product-card bg-mustard flex flex-col gap-6 w-[500px] py-6">
+                    <div class="product-image flex flex-row justify-center bg-white">
+                        <img src="https://lunar-merch.b-cdn.net/jojosbizarreadventure.shop/media/49/it-was-me-dio-jojos-bizarre-adventure-ugly-christmas-sweater-anime-xmas-gift-i0x7q.png" alt="it's me dio from anime" class="object-cover w-75">
+                    </div>
+                    <div class="product-info flex flex-col gap-4">
+                        <div class="product-header flex flex-col lg:flex-row justify-between">
+                            <h3 class="font-bagel text-2xl">It's No Dio</h3>
+                            <span class="price">$80</span>
+                        </div>
+                        <p class="product-description">So ugly it’s fabulous. And yes—it was him, Dio, ruining your family Christmas photo once again.</p>
+                        <div class="flex justify-end">
+                            <button class="view-button text-lg bg-seaweed px-4 py-1 rounded-lg">View</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 5 -->
+                <div class="product-card bg-mustard flex flex-col gap-6 w-[500px] py-6">
+                    <div class="product-image flex flex-row justify-center bg-white">
+                        <img src="https://i.etsystatic.com/8739858/r/il/922c9a/5490215238/il_570xN.5490215238_2ybs.jpg" alt="ugly christmas poncho that looks like a tree" class="object-cover w-75">
+                    </div>
+                    <div class="product-info flex flex-col gap-4 justify-between">
+                        <div class="product-header flex flex-col lg:flex-row justify-between">
+                            <h3 class="font-bagel text-2xl">Tree Vest</h3>
+                            <span class="price">$50</span>
+                        </div>
+                        <p class="product-description">So ugly it’s iconic. This tree poncho turns you into the holiday decor everyone secretly loves!</p>
+                        <div class="flex justify-end">
+                            <button class="view-button text-lg bg-seaweed px-4 py-1 rounded-lg">View</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 6 -->
+                <div class="product-card bg-mustard flex flex-col gap-6 w-[500px] py-6">
+                    <div class="product-image flex flex-row justify-center bg-white">
+                        <img src="https://di2ponv0v5otw.cloudfront.net/posts/2023/11/05/6547e79256b2f8a71570f806/m_wp_6547e7b552eee17f3c6e9d12.webp" alt="slippers that look like santa" class="object-cover w-75">
+                    </div>
+                    <div class="product-info flex flex-col gap-4">
+                        <div class="product-header flex flex-col lg:flex-row justify-between">
+                            <h3 class="font-bagel text-2xl">Tree Vest</h3>
+                            <span class="price">$50</span>
+                        </div>
+                        <p class="product-description">Soft, warm, and delightfully goofy. Santa’s smiling face brings instant holiday cheer to your toes!</p>
+                        <div class="flex justify-end">
+                            <button class="view-button text-lg bg-seaweed px-4 py-1 rounded-lg">View</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
             <div class="featuredCarousel"></div>
         </section>
 
         <!-- product categories section -->
-        <section class="categories" id="categories" aria-label="product categories section">
-            <div class="container">
-                <h2 class="section-title">Shop Categories</h2>
+        <section id="categories" class="categories" aria-label="product categories section">
+            <h2 class="section-title font-bagel text-4xl">Shop Categories</h2>
 
-                <div class="category-section">
-                    <h3 class="category-name">Clothes</h3>
-                    <div class="category-filters">
+            <div class="flex flex-row justify-between">
+                <div class="category-section flex flex-col gap-6 items-center">
+                    <h3 class="category-name font-funnel text-3xl font-medium">Clothes & Accessories</h3>
+                    <img src="https://images.unsplash.com/photo-1675095598961-c255df060e90?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="picture of wacky clothes" class="w-[400px] rounded-lg shadow-lg border-3 border-white outline-2 offset-2 outline-carrot">
+                    <div class="category-filters flex flex-row gap-6">
                         <button class="filter-button active">Shirts</button>
                         <button class="filter-button">Pants</button>
                         <button class="filter-button">Skirts</button>
@@ -142,39 +159,59 @@
                         <button class="filter-button">Hats</button>
                     </div>
                 </div>
+                <div class="category-section flex flex-col gap-6 items-center">
+                    <h3 class="category-name font-funnel text-3xl font-medium">Furniture & Decor</h3>
+                    <img src="https://images.unsplash.com/photo-1650137959510-d64eef290e86?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="picture of wacky indoor decor" class="w-[400px] rounded-lg shadow-lg border-3 border-white outline-2 offset-2 outline-carrot">
+                    <div class="category-filters flex flex-row gap-6">
+                        <button class="filter-button active">Rugs</button>
+                        <button class="filter-button">Lamps</button>
+                        <button class="filter-button">Chairs</button>
+                        <button class="filter-button">Tapestries</button>
+                        <button class="filter-button">Placemats</button>
+                    </div>
+                </div>
             </div>
         </section>
 
+        <!-- About Section -->
+        <section id="about" class="my-8 px-4">
+            <h2 class="font-bagel text-4xl mb-4">About Tacky Town</h2>
+            <p>Welcome to Tacky Town - your destination for the most delightfully tacky holiday gear!</p>
+        </section>
+
         <!-- Modal -->
-        <div class="modal" id="signupModal">
-            <div class="modal-content">
-                <span class="close-button" id="closeModal">&times;</span>
-                <div class="modal-layout">
-                    <div class="modal-image">
-                        <div class="image-placeholder">
-                            <p>IMAGE</p>
+        <div id="signupModal" class="hidden fixed inset-0 z-[2000] bg-black/50 flex items-center justify-center p-4" style="backdrop-filter: blur(5px);">            
+            <div class="flex items-center justify-center min-h-screen p-4">
+                <div class="bg-cream rounded-none max-w-[800px] w-full relative shadow-lg max-h-[90vh] overflow-y-auto">
+                    <span id="closeModal" class="absolute top-5 right-6 text-[2rem] cursor-pointer text-gray-500 transition-colors duration-150 z-10 hover:text-ink">&times;</span>
+                    <div class="flex flex-row">
+                        <div class="flex-1 bg-seaweed min-h-[500px] flex items-center justify-center p-4">
+                            <div class="text-center font-semibold text-ink">
+                                <img src="./images/kitty.png" alt="kitty kitmas">
+                                <p class="font-bagel text-cream">Meowy Kitmas!</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="modal-form-section">
-                        <h2>Get 30% off on the tackiest stuff for the holidays!</h2>
-                        <p class="modal-subtitle">
-                            This is the BIGGEST Merry & Messy event yet!
-                        </p>
-                        <form class="signup-form" id="signupForm">
-                            <label for="emailInput">Add your email</label>
-                            <input type="email" placeholder="" required id="emailInput" />
-                            <button type="submit" class="submit-button">
-                                Get your 30%
-                            </button>
-                        </form>
+                        <div class="flex-1 p-8 flex flex-col justify-center">
+                            <h2 class="mb-2 text-ink text-[1.875rem] leading-[1.3]">Get 30% off on the tackiest stuff for the holidays!</h2>
+                            <p class="text-ink mb-4 font-semibold">
+                                This is the BIGGEST Merry & Messy event yet!
+                            </p>
+                            <form id="signupForm" class="flex flex-col gap-2">
+                                <label for="emailInput" class="font-semibold text-ink mb-1">Add your email</label>
+                                <input type="email" placeholder="" required id="emailInput" class="p-3.5 border-2 border-gray-300 rounded transition-colors duration-150 focus:outline-none focus:border-ink" />
+                                <button type="submit" class="bg-[#7FD647] text-ink border-0 p-3.5 font-semibold rounded cursor-pointer transition-all duration-300 mt-2 hover:-translate-y-0.5 hover:shadow-md hover:bg-[#6EC845]">
+                                    Get your 30%
+                                </button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
+    <footer class="footer flex items-center justify-center">
+        <div class="container flex items-center justify-center">
             <p>&copy; 2024 Tacky Town. All rights reserved.</p>
             <div class="footer-links">
                 <a href="#">Privacy Policy</a>

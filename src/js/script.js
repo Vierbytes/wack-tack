@@ -4,7 +4,7 @@
 const hamburger = document.getElementById('hamburger')
 const navMenu = document.getElementById('navMenu')
 const navLinks = document.querySelectorAll('.nav-link')
-const heroCTA = document.getElementById('heroCTA')
+const heroCTA = document.getElementById('heroButton')
 const modal = document.getElementById('signupModal')
 const closeModal = document.getElementById('closeModal')
 const signupForm = document.getElementById('signupForm')
@@ -20,7 +20,7 @@ function smoothScroll(targetId) {
     const targetElement = document.querySelector(targetId)
 
     if (targetElement) {
-        const navbarHeight = document.getElementById('navbar').offsetHeight
+        const navbarHeight = document.getElementById('navBar').offsetHeight
         const targetPosition = targetElement.offsetTop - navbarHeight
 
         window.scrollTo({
@@ -47,18 +47,17 @@ navLinks.forEach(link => {
 // Modal Functionality
 // ========================================
 function openModal() {
-    modal.classList.add('show')
+    modal.classList.remove('hidden')
     document.body.style.overflow = 'hidden' // Prevent background scrolling
 }
 
 function closeModalHandler() {
-    modal.classList.remove('show')
+    modal.classList.add('hidden')
     document.body.style.overflow = 'auto' // Restore scrolling
 
     // Reset form
     signupForm.reset()
 }
-
 // Open modal when CTA button is clicked
 heroCTA.addEventListener('click', openModal)
 
@@ -74,23 +73,71 @@ modal.addEventListener('click', (e) => {
 
 // Close modal with Escape key
 document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.classList.contains('show')) {
+    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
         closeModalHandler()
     }
 })
+
+// signupForm.addEventListener('submit', (e) => {
+//     e.preventDefault()
+
+//     const email = document.getElementById('emailInput').value.trim()
+
+//     if (!email) {
+//         alert("Please enter a valid email address.")
+//         return
+//     }
+
+//     alert("Thank you! Your 30% off code is on the way!");
+
+//     closeModalHandler()
+// })
 
 
 signupForm.addEventListener('submit', (e) => {
     e.preventDefault()
 
-    const email = document.getElementById('emailInput').value.trim()
+    const email = emailInput.value.trim()
 
-    if (!email) {
-        alert("Please enter a valid email address.")
-        return
+    if (email) {
+        // Simulate form submission
+        showSuccessMessage(email)
+
+        // Close modal after a short delay
+        setTimeout(() => {
+            closeModalHandler()
+        }, 2500)
     }
-
-    alert("Thank you! Your 30% off code is on the way!");
-
-    closeModalHandler()  
 })
+
+function showSuccessMessage(email) {
+    // Create success message element
+    const successDiv = document.createElement('div')
+    successDiv.className = 'success-message'
+    successDiv.innerHTML = `
+        <p style="font-size: 1.5rem margin-bottom: 0.5rem"><img src="./images/dance.gif" alt="celey"> Thanks for signing up!</p>
+        <p>Your 30% discount code has been sent to:</p>
+        <p><strong>${email}</strong></p>
+        <p style="margin-top: 1rem font-size: 0.875rem color: #718096">Check your inbox for your exclusive Tacky Town discount!</p>
+    `
+
+    // Style the success message
+    successDiv.style.cssText = `
+        background: linear-gradient(135deg, #7ED957, #6EC845)
+        color: #2d3748
+        padding: 2rem
+        border-radius: 8px
+        margin-top: 1rem
+        text-align: center
+        animation: slideUp 0.3s ease
+    `
+
+    // Replace form with success message
+    const form = document.querySelector('#signupForm')
+    form.replaceWith(successDiv)
+
+    // Restore form after modal closes
+    setTimeout(() => {
+        successDiv.replaceWith(form)
+    }, 3000)
+}
