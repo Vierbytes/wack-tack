@@ -17,162 +17,166 @@
 <body>
     <header>
         <!-- nav bar -->
-        <nav></nav>
+        <nav role="navigation" id="navBar" class="flex flex-col md:flex-row justify-center items-center py-10 gap-20 h-[10vh] shadow-lg bg-white">
+            <a class="navTitle" href="#">TACKY TOWN</a>
+            <div class="navLinks flex flex-col md:flex-row gap-9">
+                <a href="#" class="hover:text-dusk">Featured</a>
+                <a href="#" class="hover:text-bloom">Categories</a>
+                <a href="#" class="hover:text-seaweed">About</a>
+            </div>
+        </nav>
 
         <!-- hero section -->
-        <section aria-label="hero section">
+        <section aria-label="hero section h-100">
             <button id="heroButton" class="heroButton">Get 30% off!</button>
         </section>
+	</header>
+    <main>
+        <!-- featured post section -->
+        <section aria-label="featured products section">
+            <!-- featured posts carousel -->
+            <section class="featured" id="featured">
+                <div class="container">
+                    <h2 class="section-title">Featured: Merry & Messy</h2>
 
-			<!-- hero modal template below -->
-		</header>
-		<main>
-			<!-- featured post section -->
-			<section aria-label="featured products section">
-				<!-- featured posts carousel -->
-				<section class="featured" id="featured">
-					<div class="container">
-						<h2 class="section-title">Featured: Merry & Messy</h2>
+                    <div class="carousel-wrapper">
+                        <div class="carousel-container" id="carousel">
+                            <!-- Product Card 1 -->
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div class="image-placeholder"></div>
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-header">
+                                        <h3>Product Name</h3>
+                                        <span class="price">$100</span>
+                                    </div>
+                                    <p class="product-description">Quick Description</p>
+                                    <button class="view-button">View</button>
+                                </div>
+                            </div>
 
-						<div class="carousel-wrapper">
-							<div class="carousel-container" id="carousel">
-								<!-- Product Card 1 -->
-								<div class="product-card">
-									<div class="product-image">
-										<div class="image-placeholder"></div>
-									</div>
-									<div class="product-info">
-										<div class="product-header">
-											<h3>Product Name</h3>
-											<span class="price">$100</span>
-										</div>
-										<p class="product-description">Quick Description</p>
-										<button class="view-button">View</button>
-									</div>
-								</div>
+                            <!-- Product Card 2 -->
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div class="image-placeholder"></div>
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-header">
+                                        <h3>Product Name</h3>
+                                        <span class="price">$100</span>
+                                    </div>
+                                    <p class="product-description">Quick Description</p>
+                                    <button class="view-button">View</button>
+                                </div>
+                            </div>
 
-								<!-- Product Card 2 -->
-								<div class="product-card">
-									<div class="product-image">
-										<div class="image-placeholder"></div>
-									</div>
-									<div class="product-info">
-										<div class="product-header">
-											<h3>Product Name</h3>
-											<span class="price">$100</span>
-										</div>
-										<p class="product-description">Quick Description</p>
-										<button class="view-button">View</button>
-									</div>
-								</div>
+                            <!-- Product Card 3 -->
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div class="image-placeholder"></div>
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-header">
+                                        <h3>Product Name</h3>
+                                        <span class="price">$100</span>
+                                    </div>
+                                    <p class="product-description">Quick Description</p>
+                                    <button class="view-button">View</button>
+                                </div>
+                            </div>
 
-								<!-- Product Card 3 -->
-								<div class="product-card">
-									<div class="product-image">
-										<div class="image-placeholder"></div>
-									</div>
-									<div class="product-info">
-										<div class="product-header">
-											<h3>Product Name</h3>
-											<span class="price">$100</span>
-										</div>
-										<p class="product-description">Quick Description</p>
-										<button class="view-button">View</button>
-									</div>
-								</div>
+                            <!-- Product Card 4 -->
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div class="image-placeholder"></div>
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-header">
+                                        <h3>Product Name</h3>
+                                        <span class="price">$100</span>
+                                    </div>
+                                    <p class="product-description">Quick Description</p>
+                                    <button class="view-button">View</button>
+                                </div>
+                            </div>
 
-								<!-- Product Card 4 -->
-								<div class="product-card">
-									<div class="product-image">
-										<div class="image-placeholder"></div>
-									</div>
-									<div class="product-info">
-										<div class="product-header">
-											<h3>Product Name</h3>
-											<span class="price">$100</span>
-										</div>
-										<p class="product-description">Quick Description</p>
-										<button class="view-button">View</button>
-									</div>
-								</div>
+                            <!-- Product Card 5 -->
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <div class="image-placeholder"></div>
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-header">
+                                        <h3>Product Name</h3>
+                                        <span class="price">$100</span>
+                                    </div>
+                                    <p class="product-description">Quick Description</p>
+                                    <button class="view-button">View</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="featuredCarousel"></div>
+        </section>
 
-								<!-- Product Card 5 -->
-								<div class="product-card">
-									<div class="product-image">
-										<div class="image-placeholder"></div>
-									</div>
-									<div class="product-info">
-										<div class="product-header">
-											<h3>Product Name</h3>
-											<span class="price">$100</span>
-										</div>
-										<p class="product-description">Quick Description</p>
-										<button class="view-button">View</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<div class="featuredCarousel"></div>
-			</section>
+        <!-- product categories section -->
+        <section class="categories" id="categories" aria-label="product categories section">
+            <div class="container">
+                <h2 class="section-title">Shop Categories</h2>
 
-			<!-- product categories section -->
-			<section class="categories" id="categories" aria-label="product categories section">
-				<div class="container">
-					<h2 class="section-title">Shop Categories</h2>
+                <div class="category-section">
+                    <h3 class="category-name">Clothes</h3>
+                    <div class="category-filters">
+                        <button class="filter-button active">Shirts</button>
+                        <button class="filter-button">Pants</button>
+                        <button class="filter-button">Skirts</button>
+                        <button class="filter-button">Dresses</button>
+                        <button class="filter-button">Hats</button>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-					<div class="category-section">
-						<h3 class="category-name">Clothes</h3>
-						<div class="category-filters">
-							<button class="filter-button active">Shirts</button>
-							<button class="filter-button">Pants</button>
-							<button class="filter-button">Skirts</button>
-							<button class="filter-button">Dresses</button>
-							<button class="filter-button">Hats</button>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<!-- Modal -->
-			<div class="modal" id="signupModal">
-				<div class="modal-content">
-					<span class="close-button" id="closeModal">&times;</span>
-					<div class="modal-layout">
-						<div class="modal-image">
-							<div class="image-placeholder">
-								<p>IMAGE</p>
-							</div>
-						</div>
-						<div class="modal-form-section">
-							<h2>Get 30% off on the tackiest stuff for the holidays!</h2>
-							<p class="modal-subtitle">
-								This is the BIGGEST Merry & Messy event yet!
-							</p>
-							<form class="signup-form" id="signupForm">
-								<label for="emailInput">Add your email</label>
-								<input type="email" placeholder="" required id="emailInput" />
-								<button type="submit" class="submit-button">
-									Get your 30%
-								</button>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!-- Footer -->
-			<footer class="footer">
-				<div class="container">
-					<p>&copy; 2024 Tacky Town. All rights reserved.</p>
-					<div class="footer-links">
-						<a href="#">Privacy Policy</a>
-						<a href="#">Terms of Service</a>
-						<a href="#">Contact</a>
-					</div>
-				</div>
-			</footer>
-		</main>
-	</body>
+        <!-- Modal -->
+        <div class="modal" id="signupModal">
+            <div class="modal-content">
+                <span class="close-button" id="closeModal">&times;</span>
+                <div class="modal-layout">
+                    <div class="modal-image">
+                        <div class="image-placeholder">
+                            <p>IMAGE</p>
+                        </div>
+                    </div>
+                    <div class="modal-form-section">
+                        <h2>Get 30% off on the tackiest stuff for the holidays!</h2>
+                        <p class="modal-subtitle">
+                            This is the BIGGEST Merry & Messy event yet!
+                        </p>
+                        <form class="signup-form" id="signupForm">
+                            <label for="emailInput">Add your email</label>
+                            <input type="email" placeholder="" required id="emailInput" />
+                            <button type="submit" class="submit-button">
+                                Get your 30%
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Tacky Town. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </footer>
+</body>
 </html>

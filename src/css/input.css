@@ -4,4 +4,26 @@
     /* typography */
     --font-bagel: 'Bagel Fat One', sans-serif;
     --font-funnel: 'Funnel Sans', sans-serif;
+
+    /* colors */
+    --color-ink: #04030f;
+    --color-carrot: #f6511d;
+    --color-sage: #90a959;
+    --color-cream: #fff7eb;
+    --color-seaweed: #00b295;
+    --color-bloom: #DA4167;
+    --color-dusk: #4a5899;
+
+}
+
+body {
+    @apply font-funnel text-ink text-lg bg-cream;
+}
+
+.navTitle {
+    @apply font-bagel text-6xl;
+}
+
+.navLinks a{
+    @apply font-normal text-2xl hover:font-semibold duration-500;
 }
