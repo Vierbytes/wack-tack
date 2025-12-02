@@ -38,4 +38,8 @@ body {
 
 .filter-button {
     @apply rounded-2xl border-2 border-carrot text-xl py-4 px-8 hover:bg-carrot hover:font-semibold hover:transition-all duration-700 hover:scale-105;
+/* deco */
+
+.deco {
+    @apply w-40;
 }
