@@ -18,6 +18,8 @@
     --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: calc(2.25 / 1.875);
     --text-4xl: 2.25rem;
     --text-4xl--line-height: calc(2.5 / 2.25);
     --text-6xl: 3.75rem;
@@ -37,6 +39,7 @@
     --font-bagel: 'Bagel Fat One', sans-serif;
     --font-funnel: 'Funnel Sans', sans-serif;
     --color-ink: #04030f;
+    --color-carrot: #f6511d;
     --color-cream: #fff7eb;
     --color-seaweed: #00b295;
     --color-bloom: #DA4167;
@@ -196,14 +199,6 @@
   .absolute {
     position: absolute;
   }
-  .relative {
-    position: relative;
-  }
-  .top-48 {
-    top: calc(var(--spacing) * 48);
-  }
-  .left-0 {
-    left: calc(var(--spacing) * 0);
   .fixed {
     position: fixed;
   }
@@ -216,8 +211,29 @@
   .top-5 {
     top: calc(var(--spacing) * 5);
   }
+  .top-48 {
+    top: calc(var(--spacing) * 48);
+  }
+  .top-80 {
+    top: calc(var(--spacing) * 80);
+  }
   .right-6 {
     right: calc(var(--spacing) * 6);
+  }
+  .right-10 {
+    right: calc(var(--spacing) * 10);
+  }
+  .right-30 {
+    right: calc(var(--spacing) * 30);
+  }
+  .bottom-5 {
+    bottom: calc(var(--spacing) * 5);
+  }
+  .left-0 {
+    left: calc(var(--spacing) * 0);
+  }
+  .left-30 {
+    left: calc(var(--spacing) * 30);
   }
   .z-10 {
     z-index: 10;
@@ -306,6 +322,9 @@
   .flex-row {
     flex-direction: row;
   }
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
   .items-center {
     align-items: center;
   }
@@ -330,11 +349,20 @@
   .gap-9 {
     gap: calc(var(--spacing) * 9);
   }
+  .gap-10 {
+    gap: calc(var(--spacing) * 10);
+  }
   .gap-20 {
     gap: calc(var(--spacing) * 20);
   }
+  .self-center {
+    align-self: center;
+  }
   .self-end {
     align-self: flex-end;
+  }
+  .overflow-scroll {
+    overflow: scroll;
   }
   .overflow-y-auto {
     overflow-y: auto;
@@ -644,6 +672,7 @@ body {
 }
 .deco {
   width: calc(var(--spacing) * 40);
+}
 .product-card {
   border-radius: var(--radius-2xl);
   border-style: var(--tw-border-style);
@@ -689,6 +718,9 @@ body {
       transition-duration: var(--tw-duration, var(--default-transition-duration));
     }
   }
+}
+.deco {
+  width: calc(var(--spacing) * 40);
 }
 @property --tw-border-style {
   syntax: "*";

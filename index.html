@@ -29,11 +29,17 @@
         <!-- hero section -->
         <section aria-label="hero section" class="bg-bloom h-[50vh] flex flex-col gap-9 items-center justify-center relative">
             <h1 class="text-7xl font-bagel text-cream text-shadow-lg">WHAT'S NEW IN TACKY TOWN</h1>
-            <h3 class="text-4xl">Loud. Festive. Tacky. And 30% Off!</h3>
+            <h3 class="text-4xl font-medium text-shadow-lg">Loud. Festive. Tacky. And 30% Off!</h3>
             <button id="heroButton" class="heroButton py-6 px-12 border-gray-500 shadow-xs rounded-4xl bg-seaweed text-ink font-semibold text-2xl hover:bg-mustard hover:text-ink hover:scale-105 transition-all duration-700 font-funnel">Get 30% off!</button>
 
             <!-- added deco images -->
-            <img src="./src/assets/XMAS100.png" class="deco absolute top-48 left-0">
+             <!-- candy cane -->
+            <img src="./src/assets/XMAS100.png" class="deco absolute top-80 left-30">
+            <!-- ornament -->
+            <img src="./src/assets/XMAS31.png" class="deco absolute bottom-5 right-30">
+
+            <img src="./src/assets/XMAS48.png" class="deco absolute top-5 right-10">
+            <img src="./src/assets/XMAS66.png" class="deco absolute top-5 left-30">
         </section>
 	</header>
     <main class="my-8 px-15">
@@ -41,7 +47,7 @@
         <section id="featured" aria-label="featured products section" class="flex flex-col gap-9">
             <h2 class="font-bagel text-4xl">Featured: Merry & Messy</h2>
             <!-- featured posts carousel -->
-            <div class="carousel-container flex flex-row gap-6" id="carousel">
+            <div class="carousel-container flex flex-row gap-6 overflow-scroll" id="carousel">
                 <!-- Product Card 1 -->
                 <div class="product-card bg-mustard flex flex-col gap-6 w-[500px] py-6">
                     <div class="product-image flex flex-row justify-center">
@@ -144,14 +150,14 @@
         </section>
 
         <!-- product categories section -->
-        <section id="categories" class="categories" aria-label="product categories section">
+        <section id="categories" class="categories flex flex-col items-center" aria-label="product categories section">
             <h2 class="section-title font-bagel text-4xl">Shop Categories</h2>
 
-            <div class="flex flex-row justify-between">
+            <div class="flex flex-col md:flex-row gap-10 justify-between">
                 <div class="category-section flex flex-col gap-6 items-center">
                     <h3 class="category-name font-funnel text-3xl font-medium">Clothes & Accessories</h3>
                     <img src="https://images.unsplash.com/photo-1675095598961-c255df060e90?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="picture of wacky clothes" class="w-[400px] rounded-lg shadow-lg border-3 border-white outline-2 offset-2 outline-carrot">
-                    <div class="category-filters flex flex-row gap-6">
+                    <div class="category-filters flex flex-row gap-6 self-center">
                         <button class="filter-button active">Shirts</button>
                         <button class="filter-button">Pants</button>
                         <button class="filter-button">Skirts</button>
@@ -162,7 +168,7 @@
                 <div class="category-section flex flex-col gap-6 items-center">
                     <h3 class="category-name font-funnel text-3xl font-medium">Furniture & Decor</h3>
                     <img src="https://images.unsplash.com/photo-1650137959510-d64eef290e86?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="picture of wacky indoor decor" class="w-[400px] rounded-lg shadow-lg border-3 border-white outline-2 offset-2 outline-carrot">
-                    <div class="category-filters flex flex-row gap-6">
+                    <div class="category-filters flex flex-row flex-wrap gap-6 self-center">
                         <button class="filter-button active">Rugs</button>
                         <button class="filter-button">Lamps</button>
                         <button class="filter-button">Chairs</button>
