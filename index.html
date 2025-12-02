@@ -159,27 +159,29 @@
         </section>
 
         <!-- Modal -->
-        <div class="modal" id="signupModal">
-            <div class="modal-content">
-                <span class="close-button" id="closeModal">&times;</span>
-                <div class="modal-layout">
-                    <div class="modal-image">
-                        <div class="image-placeholder">
-                            <p>IMAGE</p>
+        <div id="signupModal" class="hidden fixed inset-0 z-[2000] bg-black/50 flex items-center justify-center p-4" style="backdrop-filter: blur(5px);">            
+            <div class="flex items-center justify-center min-h-screen p-4">
+                <div class="bg-cream rounded-none max-w-[800px] w-full relative shadow-lg max-h-[90vh] overflow-y-auto">
+                    <span id="closeModal" class="absolute top-5 right-6 text-[2rem] cursor-pointer text-gray-500 transition-colors duration-150 z-10 hover:text-ink">&times;</span>
+                    <div class="flex flex-row">
+                        <div class="flex-1 bg-seaweed min-h-[500px] flex items-center justify-center p-4">
+                            <div class="text-center font-semibold text-ink">
+                                <p>IMAGE</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="modal-form-section">
-                        <h2>Get 30% off on the tackiest stuff for the holidays!</h2>
-                        <p class="modal-subtitle">
-                            This is the BIGGEST Merry & Messy event yet!
-                        </p>
-                        <form class="signup-form" id="signupForm">
-                            <label for="emailInput">Add your email</label>
-                            <input type="email" placeholder="" required id="emailInput" />
-                            <button type="submit" class="submit-button">
-                                Get your 30%
-                            </button>
-                        </form>
+                        <div class="flex-1 p-8 flex flex-col justify-center">
+                            <h2 class="mb-2 text-ink text-[1.875rem] leading-[1.3]">Get 30% off on the tackiest stuff for the holidays!</h2>
+                            <p class="text-ink mb-4 font-semibold">
+                                This is the BIGGEST Merry & Messy event yet!
+                            </p>
+                            <form id="signupForm" class="flex flex-col gap-2">
+                                <label for="emailInput" class="font-semibold text-ink mb-1">Add your email</label>
+                                <input type="email" placeholder="" required id="emailInput" class="p-3.5 border-2 border-gray-300 rounded transition-colors duration-150 focus:outline-none focus:border-ink" />
+                                <button type="submit" class="bg-[#7FD647] text-ink border-0 p-3.5 font-semibold rounded cursor-pointer transition-all duration-300 mt-2 hover:-translate-y-0.5 hover:shadow-md hover:bg-[#6EC845]">
+                                    Get your 30%
+                                </button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
