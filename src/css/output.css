@@ -18,6 +18,8 @@
     --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: calc(2.25 / 1.875);
     --text-4xl: 2.25rem;
     --text-4xl--line-height: calc(2.5 / 2.25);
     --text-6xl: 3.75rem;
@@ -37,6 +39,7 @@
     --font-bagel: 'Bagel Fat One', sans-serif;
     --font-funnel: 'Funnel Sans', sans-serif;
     --color-ink: #04030f;
+    --color-carrot: #f6511d;
     --color-cream: #fff7eb;
     --color-seaweed: #00b295;
     --color-bloom: #DA4167;
@@ -196,14 +199,6 @@
   .absolute {
     position: absolute;
   }
-  .relative {
-    position: relative;
-  }
-  .top-48 {
-    top: calc(var(--spacing) * 48);
-  }
-  .left-0 {
-    left: calc(var(--spacing) * 0);
   .fixed {
     position: fixed;
   }
@@ -213,29 +208,14 @@
   .inset-0 {
     inset: calc(var(--spacing) * 0);
   }
-  .top-0 {
-    top: calc(var(--spacing) * 0);
-  }
   .top-5 {
     top: calc(var(--spacing) * 5);
-  }
-  .top-10 {
-    top: calc(var(--spacing) * 10);
-  }
-  .top-20 {
-    top: calc(var(--spacing) * 20);
   }
   .top-48 {
     top: calc(var(--spacing) * 48);
   }
-  .top-60 {
-    top: calc(var(--spacing) * 60);
-  }
   .top-80 {
     top: calc(var(--spacing) * 80);
-  }
-  .right-0 {
-    right: calc(var(--spacing) * 0);
   }
   .right-6 {
     right: calc(var(--spacing) * 6);
@@ -243,29 +223,14 @@
   .right-10 {
     right: calc(var(--spacing) * 10);
   }
-  .right-20 {
-    right: calc(var(--spacing) * 20);
-  }
   .right-30 {
     right: calc(var(--spacing) * 30);
-  }
-  .right-48 {
-    right: calc(var(--spacing) * 48);
-  }
-  .right-50 {
-    right: calc(var(--spacing) * 50);
-  }
-  .bottom-0 {
-    bottom: calc(var(--spacing) * 0);
   }
   .bottom-5 {
     bottom: calc(var(--spacing) * 5);
   }
   .left-0 {
     left: calc(var(--spacing) * 0);
-  }
-  .left-10 {
-    left: calc(var(--spacing) * 10);
   }
   .left-30 {
     left: calc(var(--spacing) * 30);
@@ -315,9 +280,6 @@
   .hidden {
     display: none;
   }
-  .table {
-    display: table;
-  }
   .h-\[10vh\] {
     height: 10vh;
   }
@@ -342,12 +304,6 @@
   .w-\[500px\] {
     width: 500px;
   }
-  .w-\[800px\] {
-    width: 800px;
-  }
-  .w-fit {
-    width: fit-content;
-  }
   .w-full {
     width: 100%;
   }
@@ -357,14 +313,8 @@
   .flex-1 {
     flex: 1;
   }
-  .border-collapse {
-    border-collapse: collapse;
-  }
   .cursor-pointer {
     cursor: pointer;
-  }
-  .resize {
-    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -429,10 +379,6 @@
   .rounded-none {
     border-radius: 0;
   }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-  }
   .border-0 {
     border-style: var(--tw-border-style);
     border-width: 0px;
@@ -457,9 +403,6 @@
   .bg-\[\#7FD647\] {
     background-color: #7FD647;
   }
-  .bg-black {
-    background-color: var(--color-black);
-  }
   .bg-black\/50 {
     background-color: color-mix(in srgb, #000 50%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -483,9 +426,6 @@
   }
   .object-cover {
     object-fit: cover;
-  }
-  .p-3 {
-    padding: calc(var(--spacing) * 3);
   }
   .p-3\.5 {
     padding: calc(var(--spacing) * 3.5);
@@ -570,9 +510,6 @@
   .text-ink {
     color: var(--color-ink);
   }
-  .underline {
-    text-decoration-line: underline;
-  }
   .shadow-lg {
     --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
@@ -580,10 +517,6 @@
   .shadow-xs {
     --tw-shadow: 0 1px 2px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.05));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
   .outline-2 {
     outline-style: var(--tw-outline-style);
@@ -739,6 +672,7 @@ body {
 }
 .deco {
   width: calc(var(--spacing) * 40);
+}
 .product-card {
   border-radius: var(--radius-2xl);
   border-style: var(--tw-border-style);
