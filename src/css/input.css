@@ -29,3 +29,9 @@ body {
 .navLinks a{
     @apply font-normal text-2xl hover:font-semibold duration-500;
 }
+
+/* deco */
+
+.deco {
+    @apply w-40;
+}
