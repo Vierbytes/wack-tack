@@ -12,24 +12,6 @@ const emailInput = document.getElementById('emailInput')
 const carousel = document.getElementById('carousel')
 const filterButtons = document.querySelectorAll('.filter-button')
 
-// ========================================
-// Hamburger Menu Toggle
-// ========================================
-function toggleMobileMenu() {
-    hamburger.classList.toggle('active')
-    navMenu.classList.toggle('active')
-}
-
-hamburger.addEventListener('click', toggleMobileMenu)
-
-// Close mobile menu when clicking on a nav link
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        if (navMenu.classList.contains('active')) {
-            toggleMobileMenu()
-        }
-    })
-})
 
 // ========================================
 // Smooth Scrolling for Navigation Links
