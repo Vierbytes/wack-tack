@@ -13,6 +13,7 @@
     --color-seaweed: #00b295;
     --color-bloom: #DA4167;
     --color-dusk: #4a5899;
+    --color-mustard: #fed766;
 
 }
 
@@ -20,6 +21,7 @@ body {
     @apply font-funnel text-ink text-lg bg-cream;
 }
 
+/* nav styles */
 .navTitle {
     @apply font-bagel text-6xl;
 }
