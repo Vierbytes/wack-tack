@@ -18,8 +18,6 @@
     --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
-    --text-3xl: 1.875rem;
-    --text-3xl--line-height: calc(2.25 / 1.875);
     --text-4xl: 2.25rem;
     --text-4xl--line-height: calc(2.5 / 2.25);
     --text-6xl: 3.75rem;
@@ -39,7 +37,6 @@
     --font-bagel: 'Bagel Fat One', sans-serif;
     --font-funnel: 'Funnel Sans', sans-serif;
     --color-ink: #04030f;
-    --color-carrot: #f6511d;
     --color-cream: #fff7eb;
     --color-seaweed: #00b295;
     --color-bloom: #DA4167;
@@ -199,6 +196,14 @@
   .absolute {
     position: absolute;
   }
+  .relative {
+    position: relative;
+  }
+  .top-48 {
+    top: calc(var(--spacing) * 48);
+  }
+  .left-0 {
+    left: calc(var(--spacing) * 0);
   .fixed {
     position: fixed;
   }
@@ -732,6 +737,8 @@ body {
     }
   }
 }
+.deco {
+  width: calc(var(--spacing) * 40);
 .product-card {
   border-radius: var(--radius-2xl);
   border-style: var(--tw-border-style);
