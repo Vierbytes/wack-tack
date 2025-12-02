@@ -78,3 +78,19 @@ document.addEventListener('keydown', (e) => {
         closeModalHandler()
     }
 })
+
+
+signupForm.addEventListener('submit', (e) => {
+    e.preventDefault()
+
+    const email = document.getElementById('emailInput').value.trim()
+
+    if (!email) {
+        alert("Please enter a valid email address.")
+        return
+    }
+
+    alert("Thank you! Your 30% off code is on the way!");
+
+    closeModalHandler()  
+})
