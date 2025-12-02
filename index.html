@@ -1,33 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tacky Town</title>
-    <link rel="stylesheet" href="./src/css/output.css">
-    <script src="./src/js/script.js" defer></script>
-</head>
-<body>
-    <header>
-        <!-- nav bar -->
-        <nav></nav>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tacky Town</title>
+		<link rel="stylesheet" href="./src/css/output.css" />
+		<link rel="stylesheet" href="./src/css/style.css" />
+		<script src="./src/js/script.js" defer></script>
+	</head>
+	<body>
+		<header>
+			<!-- nav bar -->
+			<nav class="navbar" id="navbar">
+				<div class="nav-container">
+					<div class="logo">
+						<div class="logo-box">
+							<span>Tacky</span>
+							<span>Town</span>
+							<span>Est.</span>
+							<span>1997</span>
+						</div>
+					</div>
+					<ul class="nav-menu" id="navMenu">
+						<li><a href="#featured" class="nav-link">Features</a></li>
+						<li><a href="#categories" class="nav-link">Categories</a></li>
+						<li><a href="#about" class="nav-link">About</a></li>
+					</ul>
+					<div class="hamburger" id="hamburger">
+						<span class="bar"></span>
+						<span class="bar"></span>
+						<span class="bar"></span>
+					</div>
+				</div>
+			</nav>
+			<!-- hero section -->
+			<section aria-label="hero section" class="hero" id="hero">
+				<!-- Star decorations -->
+				<div class="star star-1">★</div>
+				<div class="star star-2">★</div>
+				<div class="star star-3">★</div>
+				<div class="star star-4">★</div>
+				<div class="star star-5">★</div>
+				<div class="star star-6">★</div>
 
-        <!-- hero section -->
-        <section aria-label="hero section">
-            <button id="heroButton" class="heroButton">Get 30% off!</button>
-        </section>
+				<div class="hero-container">
+					<h1 class="hero-title">What's New in Tacky Town</h1>
+					<button class="cta-button" id="heroCTA">
+						GET 30% OFF!<br />RUDOLPH'S REJECTS
+					</button>
+				</div>
+			</section>
 
-        <!-- hero modal template below -->
-    </header>
-    <main>
-        <!-- featured post section -->
-        <section aria-label="featured products section">
-            <!-- featured posts carousel -->
-            <div class="featuredCarousel"></div>
-        </section>
+			<!-- hero modal template below -->
+		</header>
+		<main>
+			<!-- featured post section -->
+			<section aria-label="featured products section">
+				<!-- featured posts carousel -->
+				<section class="featured" id="featured">
+					<div class="container">
+						<h2 class="section-title">Featured: Merry & Messy</h2>
 
-        <!-- product categories section -->
-        <section aria-label="product categories section"></section>
-    </main>
-</body>
+						<div class="carousel-wrapper">
+							<div class="carousel-container" id="carousel">
+								<!-- Product Card 1 -->
+								<div class="product-card">
+									<div class="product-image">
+										<div class="image-placeholder"></div>
+									</div>
+									<div class="product-info">
+										<div class="product-header">
+											<h3>Product Name</h3>
+											<span class="price">$100</span>
+										</div>
+										<p class="product-description">Quick Description</p>
+										<button class="view-button">View</button>
+									</div>
+								</div>
+
+								<!-- Product Card 2 -->
+								<div class="product-card">
+									<div class="product-image">
+										<div class="image-placeholder"></div>
+									</div>
+									<div class="product-info">
+										<div class="product-header">
+											<h3>Product Name</h3>
+											<span class="price">$100</span>
+										</div>
+										<p class="product-description">Quick Description</p>
+										<button class="view-button">View</button>
+									</div>
+								</div>
+
+								<!-- Product Card 3 -->
+								<div class="product-card">
+									<div class="product-image">
+										<div class="image-placeholder"></div>
+									</div>
+									<div class="product-info">
+										<div class="product-header">
+											<h3>Product Name</h3>
+											<span class="price">$100</span>
+										</div>
+										<p class="product-description">Quick Description</p>
+										<button class="view-button">View</button>
+									</div>
+								</div>
+
+								<!-- Product Card 4 -->
+								<div class="product-card">
+									<div class="product-image">
+										<div class="image-placeholder"></div>
+									</div>
+									<div class="product-info">
+										<div class="product-header">
+											<h3>Product Name</h3>
+											<span class="price">$100</span>
+										</div>
+										<p class="product-description">Quick Description</p>
+										<button class="view-button">View</button>
+									</div>
+								</div>
+
+								<!-- Product Card 5 -->
+								<div class="product-card">
+									<div class="product-image">
+										<div class="image-placeholder"></div>
+									</div>
+									<div class="product-info">
+										<div class="product-header">
+											<h3>Product Name</h3>
+											<span class="price">$100</span>
+										</div>
+										<p class="product-description">Quick Description</p>
+										<button class="view-button">View</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<div class="featuredCarousel"></div>
+			</section>
+
+			<!-- product categories section -->
+			<section class="categories" id="categories" aria-label="product categories section">
+				<div class="container">
+					<h2 class="section-title">Shop Categories</h2>
+
+					<div class="category-section">
+						<h3 class="category-name">Clothes</h3>
+						<div class="category-filters">
+							<button class="filter-button active">Shirts</button>
+							<button class="filter-button">Pants</button>
+							<button class="filter-button">Skirts</button>
+							<button class="filter-button">Dresses</button>
+							<button class="filter-button">Hats</button>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Modal -->
+			<div class="modal" id="signupModal">
+				<div class="modal-content">
+					<span class="close-button" id="closeModal">&times;</span>
+					<div class="modal-layout">
+						<div class="modal-image">
+							<div class="image-placeholder">
+								<p>IMAGE</p>
+							</div>
+						</div>
+						<div class="modal-form-section">
+							<h2>Get 30% off on the tackiest stuff for the holidays!</h2>
+							<p class="modal-subtitle">
+								This is the BIGGEST Merry & Messy event yet!
+							</p>
+							<form class="signup-form" id="signupForm">
+								<label for="emailInput">Add your email</label>
+								<input type="email" placeholder="" required id="emailInput" />
+								<button type="submit" class="submit-button">
+									Get your 30%
+								</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Footer -->
+			<footer class="footer">
+				<div class="container">
+					<p>&copy; 2024 Tacky Town. All rights reserved.</p>
+					<div class="footer-links">
+						<a href="#">Privacy Policy</a>
+						<a href="#">Terms of Service</a>
+						<a href="#">Contact</a>
+					</div>
+				</div>
+			</footer>
+		</main>
+	</body>
 </html>
