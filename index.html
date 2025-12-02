@@ -20,9 +20,9 @@
         <nav role="navigation" id="navBar" class="flex flex-col md:flex-row justify-center items-center py-10 gap-20 h-[10vh] shadow-lg bg-white">
             <a class="navTitle" href="#">TACKY TOWN</a>
             <div class="navLinks flex flex-col md:flex-row gap-9">
-                <a href="#" class="hover:text-dusk">Featured</a>
-                <a href="#" class="hover:text-bloom">Categories</a>
-                <a href="#" class="hover:text-seaweed">About</a>
+                <a href="#featured" class="nav-link hover:text-dusk">Featured</a>
+                <a href="#categories" class="nav-link hover:text-bloom">Categories</a>
+                <a href="#about" class="nav-link hover:text-seaweed">About</a>
             </div>
         </nav>
 
@@ -35,7 +35,7 @@
 	</header>
     <main class="my-8 px-15">
         <!-- featured post section -->
-        <section aria-label="featured products section" class="flex flex-col gap-9">
+        <section id="featured" aria-label="featured products section" class="flex flex-col gap-9">
             <h2 class="font-bagel text-4xl">Featured: Merry & Messy</h2>
             <!-- featured posts carousel -->
             <div class="carousel-container flex flex-row gap-6" id="carousel">
@@ -141,7 +141,7 @@
         </section>
 
         <!-- product categories section -->
-        <section class="categories flex flex-col gap-4" id="categories" aria-label="product categories section">
+        <section id="categories" class="categories" aria-label="product categories section">
             <h2 class="section-title font-bagel text-4xl">Shop Categories</h2>
 
             <div class="flex flex-row justify-between">
@@ -170,6 +170,12 @@
             </div>
         </section>
 
+        <!-- About Section -->
+        <section id="about" class="my-8 px-4">
+            <h2 class="font-bagel text-4xl mb-4">About Tacky Town</h2>
+            <p>Welcome to Tacky Town - your destination for the most delightfully tacky holiday gear!</p>
+        </section>
+
         <!-- Modal -->
         <div id="signupModal" class="hidden fixed inset-0 z-[2000] bg-black/50 flex items-center justify-center p-4" style="backdrop-filter: blur(5px);">            
             <div class="flex items-center justify-center min-h-screen p-4">
@@ -178,7 +184,8 @@
                     <div class="flex flex-row">
                         <div class="flex-1 bg-seaweed min-h-[500px] flex items-center justify-center p-4">
                             <div class="text-center font-semibold text-ink">
-                                <p>IMAGE</p>
+                                <img src="./images/kitty.png" alt="kitty kitmas">
+                                <p class="font-bagel text-cream">Meowy Kitmas!</p>
                             </div>
                         </div>
                         <div class="flex-1 p-8 flex flex-col justify-center">

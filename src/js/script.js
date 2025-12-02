@@ -20,7 +20,7 @@ function smoothScroll(targetId) {
     const targetElement = document.querySelector(targetId)
 
     if (targetElement) {
-        const navbarHeight = document.getElementById('navbar').offsetHeight
+        const navbarHeight = document.getElementById('navBar').offsetHeight
         const targetPosition = targetElement.offsetTop - navbarHeight
 
         window.scrollTo({
