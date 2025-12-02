@@ -29,3 +29,9 @@ body {
 .navLinks a{
     @apply font-normal text-2xl hover:font-semibold duration-500;
 }
+
+/* products section */
+
+.product-card {
+    @apply rounded-2xl py-2 px-6 border-2 border-ink;
+}
